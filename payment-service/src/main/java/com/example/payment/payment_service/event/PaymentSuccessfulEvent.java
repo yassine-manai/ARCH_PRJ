@@ -1,6 +1,7 @@
 package com.example.payment.payment_service.event;
 
 public class PaymentSuccessfulEvent {
+
     private String bookingId;
     private String status;
 
@@ -9,7 +10,7 @@ public class PaymentSuccessfulEvent {
         this.status = status;
     }
 
-    // Getters and setters
+    // Getters and Setters
     public String getBookingId() { return bookingId; }
     public void setBookingId(String bookingId) { this.bookingId = bookingId; }
 

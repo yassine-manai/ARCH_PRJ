@@ -9,20 +9,27 @@
 <body>
   <div class="container">
     <h1>🎬 Book Your Movie Ticket</h1>
+    
+    <!-- Booking Form -->
     <form id="booking-form">
       <input type="text" id="userId" placeholder="User ID" required />
       <input type="text" id="seatNumber" placeholder="Seat Number" required />
+      <input type="text" id="movie" placeholder="Movie Name" required />
+      <input type="email" id="userEmail" placeholder="Your Email" required />
       <button type="submit">Book Ticket</button>
     </form>
 
+    <!-- Payment Form -->
     <form id="payment-form">
       <input type="text" id="bookingId" placeholder="Booking ID" required />
       <input type="number" id="amount" placeholder="Amount" required />
       <button type="submit">Pay</button>
     </form>
 
+    <!-- Response -->
     <div id="response"></div>
   </div>
+  
   <script src="script.js"></script>
 </body>
 </html>
