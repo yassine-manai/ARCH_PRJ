@@ -1,0 +1,172 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .container {
+    max-width: 500px;
+    width: 90%;
+    margin: 30px auto;
+    padding: 35px;
+    background: #fff;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    border-radius: 16px;
+    transform: translateY(0);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+    font-size: 28px;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 12px;
+  }
+  
+  h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: #5c67f2;
+    border-radius: 3px;
+  }
+  
+  form {
+    margin-bottom: 25px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 14px 16px;
+    margin-top: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: all 0.25s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+  }
+  
+  input:focus {
+    border-color: #5c67f2;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(92,103,242,0.15);
+  }
+  
+  button {
+    width: 100%;
+    padding: 15px;
+    background-color: #5c67f2;
+    color: #fff;
+    border: none;
+    margin-top: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 12px rgba(92,103,242,0.3);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  button:hover {
+    background-color: #4a54e1;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(92,103,242,0.4);
+  }
+  
+  button:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 8px rgba(92,103,242,0.3);
+  }
+  
+  button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background: rgba(255,255,255,0.5);
+    opacity: 0;
+    border-radius: 100%;
+    transform: scale(1) translate(-50%, -50%);
+    transform-origin: 50% 50%;
+  }
+  
+  button:focus:not(:active)::after {
+    animation: ripple 0.8s ease-out;
+  }
+  
+  @keyframes ripple {
+    0% {
+      opacity: 1;
+      transform: scale(0) translate(-50%, -50%);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(20) translate(-50%, -50%);
+    }
+  }
+  
+  #response {
+    margin-top: 25px;
+    font-weight: 500;
+    color: #444;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #f8f9fa;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+  
+  /* Added movie theme elements */
+  .movie-icon {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 40px;
+    color: #5c67f2;
+  }
+  
+  .ticket-info {
+    background-color: #f8f9fa;
+    border-left: 3px solid #5c67f2;
+    padding: 12px;
+    margin: 20px 0;
+    border-radius: 4px;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 576px) {
+    .container {
+      padding: 25px;
+      margin: 20px auto;
+    }
+    
+    h1 {
+      font-size: 24px;
+    }
+    
+    input, button {
+      padding: 12px;
+    }
+  }
